@@ -1,3 +1,4 @@
+from ejercicio3 import Vehiculo
 import ejercicio3
 if __name__ == '__main__':
     lista = ejercicio3.Lista()
