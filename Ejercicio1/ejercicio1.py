@@ -48,9 +48,12 @@ class Pila(object):
             dato = paux.desapilar()
             print(dato)
             paux.apilar(paux, dato)
+            return dato
         while not paux.pila_vacia():
             dato = paux.desapilar()
+            print(dato)
             paux.apilar(pila, dato)
+            return dato
 
 aguja1 = Pila()
 aguja2 = Pila()
@@ -59,6 +62,7 @@ aguja3 = Pila()
 n = 0
 while n < 75:
     aguja1.apilar(n)
+    print(n)
     n += 1
 
 aguja1.barrido()
