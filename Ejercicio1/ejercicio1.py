@@ -44,10 +44,21 @@ class Pila(object):
         #Vamos sacando uno por uno los datos de la pila y damos su valor, luego los metemos a paux
         #cuando terminamos, desapilamos paux y los volvemos a meter a la primera pila
         paux = Pila()
-        while not paux.pila_vacia(pila):
-            dato = paux.desapilar(pila)
+        while not paux.pila_vacia():
+            dato = paux.desapilar()
             print(dato)
             paux.apilar(paux, dato)
-        while not paux.pila_vacia(paux):
-            dato = paux.desapilar(paux)
+        while not paux.pila_vacia():
+            dato = paux.desapilar()
             paux.apilar(pila, dato)
+
+aguja1 = Pila()
+aguja2 = Pila()
+aguja3 = Pila()
+
+n = 0
+while n < 75:
+    aguja1.apilar(n)
+    n += 1
+
+aguja1.barrido()
