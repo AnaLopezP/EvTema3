@@ -107,6 +107,15 @@ class Vehiculo(Lista):
         self.tripulacion = random.randint(2, 10)
         self.num_pasajeros = random.randint(20, 50)
         super().__init__()
+
+        if self.nombre == 'Estrella de la Muerte':
+            self.largo = 9000
+            self.tripulacion = 1000
+            self.num_pasajeros = 0
+        if self.nombre == 'Halcón Milenario':
+            self.largo = 200
+            self.tripulacion = 7
+            self.num_pasajeros = 0
     
     def lista(self, lista):
         lista.append(self.nombre)
