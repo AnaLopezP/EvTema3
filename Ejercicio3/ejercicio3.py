@@ -109,10 +109,12 @@ class Vehiculo(Lista):
         super().__init__()
 
         if self.nombre == 'Estrella de la Muerte':
+            print("HAS DADO CON LA ESTRELLA DE LA MUERTE")
             self.largo = 9000
             self.tripulacion = 1000
             self.num_pasajeros = 0
         if self.nombre == 'Halcón Milenario':
+            print("HAS DADO CON EL HALCÓN MILENARIO")
             self.largo = 200
             self.tripulacion = 7
             self.num_pasajeros = 0
