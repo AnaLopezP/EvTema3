@@ -100,6 +100,26 @@ class Lista(object):
         else:
             return dic[campo]
 
+class Vehiculo(Lista):
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.largo = random.randint(10, 100) #en metros
+        self.tripulacion = random.randint(2, 10)
+        self.num_pasajeros = random.randint(20, 50)
+        super().__init__()
+    
+    def lista(self, lista):
+        lista.append(self.nombre)
+        lista.append(self.largo)
+        lista.append(self.tripulacion)
+        lista.append(self.num_pasajeros)
+        return lista
+
+    def __str__(self) -> str:
+        return "El vehiculo con nombre " + str(self.nombre) + " tiene un largo de " + str(self.largo) + " una tripulacion de " + str(self.tripulacion) + " y un numero de pasajeros " + str(self.num_pasajeros)
+
+
+
 
 
 
