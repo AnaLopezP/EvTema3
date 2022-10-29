@@ -33,25 +33,28 @@ class Pila(object):
 
     def barrido(pila):
         paux = Pila()
-        while not paux.pila_vacia():
-            dato = paux.desapilar()
+        while not pila.pila_vacia():
+            dato = pila.desapilar()
             print(dato)
-            paux.apilar(paux, dato)
+            pila.apilar(dato)
             return dato
         while not paux.pila_vacia():
             dato = paux.desapilar()
             print(dato)
-            paux.apilar(pila, dato)
+            paux.apilar(dato)
             return dato
 
 aguja1 = Pila()
 aguja2 = Pila()
 aguja3 = Pila()
 
-n = 0
+'''n = 0
 while n < 75:
     aguja1.apilar(n)
-    print(n)
-    n += 1
+    n += 1'''
+
+for i in range(1, 75):
+    aguja1.apilar(i)
+    #print(aguja1.apilar(i))
 
 aguja1.barrido()
