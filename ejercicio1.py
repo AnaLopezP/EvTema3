@@ -11,7 +11,8 @@ class Pila(object):
         nodo.info = dato 
         nodo.sig = pila.cima 
         pila.cima = nodo 
-        pila.tamanio += 1 
+        pila.tamanio += 1
+        return nodo 
 
     def desapilar(pila):
         x = pila.cima.info 
@@ -48,13 +49,16 @@ aguja1 = Pila()
 aguja2 = Pila()
 aguja3 = Pila()
 
-'''n = 0
-while n < 75:
-    aguja1.apilar(n)
-    n += 1'''
+def añadir(num):
+    if num < 75:
+        aguja1.apilar(num)
+        print(aguja1.en_cima)
+        añadir(num + 1)
+    else:
+        pass
 
-for i in range(1, 75):
-    aguja1.apilar(i)
-    #print(aguja1.apilar(i))
+añadir(1)
+#El disco mas pequeño es el que corresponde al numero 74
+#El mas grande es el 1
 
-aguja1.barrido()
+
