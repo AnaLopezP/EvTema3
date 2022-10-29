@@ -129,7 +129,25 @@ class Vehiculo(Lista):
     def __str__(self) -> str:
         return "El vehiculo con nombre " + str(self.nombre) + " tiene un largo de " + str(self.largo) + " una tripulacion de " + str(self.tripulacion) + " y un numero de pasajeros " + str(self.num_pasajeros)
 
+if __name__ == '__main__':
+    lista = Lista()
+    dato = input("Ingresa el nombre de la nave: ")
+    info = []
+    a = Vehiculo(dato)
+    Vehiculo.lista(a, info)
+    print(a)
+    print(info)
+    while dato != '':
+        Lista.insertar(lista, dato)
+        dato = input("Ingresa el nombre de la nave (pulsa enter para cerrar la lista): ")
+        info = []
+        a = Vehiculo(dato)
+        Vehiculo.lista(a, info)
+        print(a)
+        print(info)
 
+
+    Lista.barrido(lista)
 
 
 
