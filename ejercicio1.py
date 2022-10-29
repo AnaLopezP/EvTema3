@@ -61,4 +61,10 @@ añadir(1)
 #El disco mas pequeño es el que corresponde al numero 74
 #El mas grande es el 1
 
-
+def comparar(num1, num2):
+    if num1 > num2:
+        print("El disco es más pequeño que el que hay, por lo tanto, se puede poner encima")
+        return True
+    else:
+        print("El disco es más grande que el que hay, no se puede poner encima, lo ponemos en otra aguja")
+        return False
