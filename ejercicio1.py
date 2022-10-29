@@ -68,3 +68,15 @@ def comparar(num1, num2):
     else:
         print("El disco es más grande que el que hay, no se puede poner encima, lo ponemos en otra aguja")
         return False
+
+def añadir_discoadisco(num1, num2, num3, aguja_inicial, aguja_quequiero, aguja_quesobra):
+    if comparar(num1, num2) == True and aguja_quequiero.cima.info == num2:
+        #Me añades el disco a la aguja que teniamos prevista
+            aguja_inicial.desapilar(num1)
+            aguja_quequiero.apilar(num1)
+    elif comparar(num1, num2) == False and aguja_quequiero.cima.info == num2:
+        aguja_inicial.desapilar(num1)
+        comparar(num1, num3)
+        if comparar(num1, num3) == True and aguja_quesobra.cima.info == num3:
+            aguja_inicial.desapilar(num1)
+            aguja_quesobra.apilar(num1)
