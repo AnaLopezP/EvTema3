@@ -37,12 +37,12 @@ class Pila(object):
         while not pila.pila_vacia():
             dato = pila.desapilar()
             print(dato)
-            pila.apilar(dato)
+            paux.apilar(dato)
             return dato
         while not paux.pila_vacia():
             dato = paux.desapilar()
             print(dato)
-            paux.apilar(dato)
+            pila.apilar(dato)
             return dato
 
 aguja1 = Pila()
