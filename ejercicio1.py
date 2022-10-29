@@ -1,3 +1,7 @@
+
+
+
+
 class NodoPila:
     info, sig = None, None 
 
