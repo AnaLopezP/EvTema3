@@ -17,7 +17,7 @@ def iniciar():
         print("[5] Ejercicio 5")
         print("[6] Ninguno")
 
-        decision = input("> ")
+        decision = int(input("> "))
         if decision == 1:
             aguja1 = ejercicio1.Pila()
             aguja2 = ejercicio1.Pila()
@@ -28,13 +28,13 @@ def iniciar():
 
             ejercicio1.jugar(aguja1.tamanio(), aguja1, aguja2, aguja3)
         
-        elif decision == 2:
+        if decision == 2:
             mat = ejercicio2.crear_mat(ejercicio2.matriz)
             print(mat)
             det = ejercicio2.sarrus_it(mat)
             print(det)
 
-        elif decision == 3:
+        if decision == 3:
             lista = ejercicio3.Lista()
             toda_info = []
             dato = input("Ingresa el nombre de la nave: ")
@@ -118,6 +118,10 @@ def iniciar():
                 print("Ese polinomio no existe")
             print(pol_nuevo)
         
+        if decision == 5:
+            pass
         helpers.limpiar_pantalla()
 
         input("\nPresiona ENTER  para continuar")
+
+iniciar()

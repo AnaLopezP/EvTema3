@@ -147,10 +147,10 @@ def at(l, l2):
         if "AT" in l.inicio.info:
             l2.append(l.inicio.info)
             l.eliminar(l.inicio.info)
-            at()
+            at(l, l2)
         else:
             l.eliminar(l.inicio.info)
-            at()
+            at(l, l2)
     else:
         pass
     return l2
