@@ -142,21 +142,21 @@ def ordenar_pasajeros(lis, filtro):
         i = i + 1
     return lis
 
-def at():
-    if Lista.lista_vacia(lista) != True:
-        if "AT" in lista.inicio.info:
-            si_at.append(lista.inicio.info)
-            lista.eliminar(lista.inicio.info)
+def at(l, l2):
+    if Lista.lista_vacia(l) != True:
+        if "AT" in l.inicio.info:
+            l2.append(l.inicio.info)
+            l.eliminar(l.inicio.info)
             at()
         else:
-            lista.eliminar(lista.inicio.info)
+            l.eliminar(l.inicio.info)
             at()
     else:
         pass
-    return si_at
+    return l2
 
 
-lista = Lista()
+'''lista = Lista()
 toda_info = []
 dato = input("Ingresa el nombre de la nave: ")
 info_lista = []
@@ -205,4 +205,4 @@ print(nvs_6omas)
 print("La nave más grande es: ")
 print(list_ordenada_tamaño[0])
 print("La nave más pequeña es:")
-print(list_ordenada_tamaño[-1])
+print(list_ordenada_tamaño[-1])'''
