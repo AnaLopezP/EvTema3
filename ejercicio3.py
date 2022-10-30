@@ -166,9 +166,17 @@ def ordenar_pasajeros(lis, filtro):
 
 list_ordenada = ordenar_pasajeros(toda_info, 3)
 print("LAS NAVES CON EL MAYOR NUMERO DE PASAJEROS")
-for i in range(0, 5):
-    print(str(list_ordenada[i][0]) + " con " + str(list_ordenada[i][3]) + " pasajeros")
+if len(info_lista) < 5:
+    for i in range(len(list_ordenada)):
+        print(str(list_ordenada[i][0]) + " con " + str(list_ordenada[i][3]) + " pasajeros")
+else:
+    for i in range(0, 5):
+        print(str(list_ordenada[i][0]) + " con " + str(list_ordenada[i][3]) + " pasajeros")
 
 list_ordenada_tamaño = ordenar_pasajeros(toda_info, 1)
 print("La nave que requiere mayor numero de tripulacion es:")
 print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_tamaño[0][1])) 
+
+for i in range(len(info_lista)):
+    if "AT" in info_lista[i][0]:
+        print(info_lista[i])
