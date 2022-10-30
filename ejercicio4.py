@@ -2,6 +2,7 @@
 pol1 = [3, -4, 5]
 pol2 = [1, 5, -3]
 pol1_conx = []
+pol2_conx = []
 
 def restar_polinomios(pol1, pol2):
     pol_nuevo = []
@@ -39,9 +40,12 @@ def polinomio(lista, len):
 
 pol1_conx = print_term(pol1, 2, 0, pol1_conx)
 print(pol1_conx)
-#pol1_bien = polinomio(pol1_conx, 3)
+pol2_conx = print_term(pol2, 2, 0, pol2_conx)
+print(pol2_conx)
 
 pol3 = restar_polinomios(pol1, pol2)
 print(pol3)
-
+pol3_conx = []
+pol3_conx = print_term(pol3, 2, 0, pol3_conx)
+print(pol3_conx)
 
