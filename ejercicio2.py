@@ -21,10 +21,13 @@ def sarrus_it(matriz):
     determinante = element1 - element2
     return determinante
 
-if __name__== '__main__':
-    mat = crear_mat(matriz)
-    print(mat)
-    det = sarrus_it(mat)
-    print(det)
+mat = crear_mat(matriz)
+print(mat)
+det = sarrus_it(mat)
+print(det)
 
-
+#funcion de sarrus recursiva
+def sarrus_rec():
+    for i in range(len(matriz)):
+        return 
+    return determinante
