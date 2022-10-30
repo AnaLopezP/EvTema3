@@ -58,9 +58,9 @@ def buscar(pol, term):
 
 
 def eliminar(pol, grado):
-    pol = reversed(pol)
+    pol = list(reversed(pol))
     pol.pop(int(grado))
-    pol = reversed(pol)
+    pol = list(reversed(pol))
     return pol
         
     
