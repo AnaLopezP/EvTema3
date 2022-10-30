@@ -32,6 +32,12 @@ def iniciar():
                 ejercicio1.comparar(aguja1.cima.info, aguja2.cima.info)
                 ejercicio1.añadir_discoadisco(aguja1.cima.info, aguja2.cima.info, aguja3.cima.info, aguja1, aguja2, aguja3)
         
+        elif decision == 2:
+            mat = ejercicio2.crear_mat(ejercicio2.matriz)
+            print(mat)
+            det = ejercicio2.sarrus_it(mat)
+            print(det)
+        
         
         helpers.limpiar_pantalla()
 
