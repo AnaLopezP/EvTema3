@@ -110,7 +110,7 @@ class Vehiculo(Lista):
 
         if self.nombre == 'Estrella de la Muerte':
             print("HAS DADO CON LA ESTRELLA DE LA MUERTE")
-            self.largo = 34.37
+            self.largo = 600
             self.tripulacion = 1381669
             self.num_pasajeros = 100000
         if self.nombre == 'Halcón Milenario':
