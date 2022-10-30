@@ -131,24 +131,39 @@ class Vehiculo(Lista):
 
 
 lista = Lista()
+toda_info = []
 dato = input("Ingresa el nombre de la nave: ")
-info = []
+info_lista = []
 a = Vehiculo(dato)
-Vehiculo.lista(a, info)
+Vehiculo.lista(a, info_lista)
+toda_info.append(info_lista)
 print(a)
 while dato != '':
     Lista.insertar(lista, dato)
     dato = input("Ingresa el nombre de la nave: ")
-    info = []
+    info_lista = []
     a = Vehiculo(dato)
-    Vehiculo.lista(a, info)
+    Vehiculo.lista(a, info_lista)
+    toda_info.append(info_lista)
     print(a)
 
-
+toda_info.pop(-1)
+print(toda_info)
 Lista.barrido(lista)
 
+def ordenar_pasajeros(lis):
+    i = 0
+    control = True
+    while i <= len(lis) - 2 and control:
+        control = False
+        for j in range(len(lis)-i-1):
+            if lis[j][3] > lis[j + 1][3]:
+                lis[j], lis[j + 1] = lis[j +1], lis[j]
+                control = True
+        i = i + 1
+    return lis
 
 
 
-
-
+list_ordenada = ordenar_pasajeros(toda_info)
+print(list_ordenada)
