@@ -110,14 +110,14 @@ class Vehiculo(Lista):
 
         if self.nombre == 'Estrella de la Muerte':
             print("HAS DADO CON LA ESTRELLA DE LA MUERTE")
-            self.largo = str(34.37) + "km"
-            self.tripulacion = str(1381669) + " (contando soldados de asalto, oficiales imperiales, auxiliares y pilotos militares)"
-            self.num_pasajeros = "mayor a 100000 civiles"
+            self.largo = 34.37
+            self.tripulacion = 1381669
+            self.num_pasajeros = 100000
         if self.nombre == 'Halcón Milenario':
             print("HAS DADO CON EL HALCÓN MILENARIO")
             self.largo = 34.75
-            self.tripulacion = str(4) + "(Han Solo, Chewbacca, Droma, Leia Organa)"
-            self.num_pasajeros = str(3) + "(Luke Skywalker, Ben Kenobi, Droide de reparaciones)"
+            self.tripulacion = 4
+            self.num_pasajeros = 3
     
     def lista(self, lista):
         lista.append(self.nombre)
@@ -164,6 +164,7 @@ def ordenar_pasajeros(lis):
     return lis
 
 
-
 list_ordenada = ordenar_pasajeros(toda_info)
-print(list_ordenada)
+print("LAS NAVES CON EL MAYOR NUMERO DE PASAJEROS")
+for i in range(0, 5):
+    print(list_ordenada[i][0] + " con " +list_ordenada[i][3] + " pasajeros")
