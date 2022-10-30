@@ -70,7 +70,7 @@ def iniciar():
 
             si_at = []
             print("lista que empiza por AT:")
-            print(ejercicio3.at())
+            print(ejercicio3.at(lista, si_at))
 
             print("Las naves que llevan seis o más pasajeros:")
             nvs_6omas = []
