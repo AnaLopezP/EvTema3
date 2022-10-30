@@ -157,7 +157,7 @@ def ordenar_pasajeros(lis):
     while i <= len(lis) - 2 and control:
         control = False
         for j in range(len(lis)-i-1):
-            if lis[j][3] > lis[j + 1][3]:
+            if lis[j][3] < lis[j + 1][3]:
                 lis[j], lis[j + 1] = lis[j +1], lis[j]
                 control = True
         i = i + 1
