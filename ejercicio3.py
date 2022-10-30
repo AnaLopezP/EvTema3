@@ -178,17 +178,20 @@ print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_
 
 si_at = []
 def at():
-    if "AT" in lista.inicio.info:
-        print(lista.inicio.info)
-        si_at.append(lista.inicio.info)
-        lista.eliminar(lista.inicio.info)
-        #lista.inicio.sig = lista.inicio
-        at()
+    if Lista.lista_vacia(lista) != True:
+        if "AT" in lista.inicio.info:
+            print(lista.inicio.info)
+            si_at.append(lista.inicio.info)
+            lista.eliminar(lista.inicio.info)
+            #lista.inicio.sig = lista.inicio
+            at()
+        else:
+            print(lista.inicio.info)
+            lista.eliminar(lista.inicio.info)
+            #lista.inicio.sig = lista.inicio
+            at()
     else:
-        print(lista.inicio.info)
-        lista.eliminar(lista.inicio.info)
-        #lista.inicio.sig = lista.inicio
-        at()
+        pass
     return si_at
 
 while Lista.lista_vacia(lista) != True:
