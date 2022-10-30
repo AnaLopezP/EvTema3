@@ -50,12 +50,19 @@ def polinomio(lista, len):
         print(resultado)
     return resultado
 
+def buscar(pol, term):
+    for i in range(len(pol)):
+        if pol[i] == term:
+            return True
+        return "No esta en el polinomio"
+
+
 def eliminar(pol, term):
     for i in range(len(pol)):
         if pol[i] == term:
             pol.pop(i)
             return pol
-    return "No esta en el polinomio"
+        return "No esta en el polinomio"
     
 
 pol1 = crear_polinomio()
