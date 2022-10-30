@@ -89,7 +89,36 @@ def iniciar():
             print(list_ordenada_tamaño[0])
             print("La nave más pequeña es:")
             print(list_ordenada_tamaño[-1])
-        
+        if decision == 4:
+            pol1 = ejercicio4.crear_polinomio()
+            print(pol1)
+            y1 = []
+            y1 = ejercicio4.print_term(pol1, len(pol1)-1, 0, y1)
+            print("y1 es " + str(y1))
+            pol2 = ejercicio4.crear_polinomio()
+            print(pol2)
+            y2 = []
+            y2 = ejercicio4.print_term(pol2, len(pol2)-1, 0, y2)
+            print("y2 es " + str(y2))
+            pol3 = ejercicio4.restar_polinomios(pol1, pol2)
+            print(pol3)
+            y3 = []
+            y3 = ejercicio4.print_term(pol3, len(pol3)-1, 0, y3)
+            print("y3 es " + str(y3))
+            print("Introduzca un numero para eliminar un valor del polinomio correspondiente: ")
+            elegir = int(input())
+            if elegir == 1:
+                elim = input("Introduzca el grado del elemento a eliminar: ")
+                pol_nuevo = ejercicio4.eliminar(y1, elim)
+            elif elegir == 2:
+                elim = input("Introduzca el grado del elemento a eliminar: ")
+                pol_nuevo = ejercicio4.eliminar(y2, elim)
+            elif elegir == 3:
+                elim = input("Introduzca el grado del elemento a eliminar: ")
+                pol_nuevo = ejercicio4.eliminar(y3, elim)
+            else:
+                print("Ese polinomio no existe")
+            print(pol_nuevo)
         
         helpers.limpiar_pantalla()
 
