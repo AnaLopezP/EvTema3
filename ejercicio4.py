@@ -1,8 +1,13 @@
-
-pol1 = [3, -4, 5]
-pol2 = [1, 5, -3]
-pol4 = [1, 2, 3, 4, 5]
-pol5 = [7, 8]
+def crear_polinomio():
+    pol = []
+    termino = input("Introduzca termino: ")
+    pol.append(termino)
+    while termino != '':
+        termino = input("Introduzca termino: ")
+        pol.append(termino)
+    #pol.pop(-1)
+    return pol
+    
 
 
 def restar_polinomios(pol1, pol2):
@@ -65,7 +70,7 @@ pol3_conx = []
 pol3_conx = print_term(pol3, 2, 0, pol3_conx)
 print(pol3_conx)'''
 
-jsjs = restar_polinomios(pol1, pol4)
+'''jsjs = restar_polinomios(pol1, pol4)
 jsjs2 = []
 jsjs = print_term(jsjs, 5, 0, jsjs2)
 print(jsjs2)
@@ -74,4 +79,4 @@ ahuevo2 = []
 ahuevo = print_term(ahuevo, 3, 0, ahuevo2)
 print(ahuevo2)
 
-print(eliminar(ahuevo2, '0'))
+print(eliminar(ahuevo2, '0'))'''
