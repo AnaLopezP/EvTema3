@@ -18,6 +18,8 @@ def iniciar():
         print("[6] Ninguno")
 
         decision = input("> ")
+        if decision == 1:
+            pass
         helpers.limpiar_pantalla()
 
         input("\nPresiona ENTER  para continuar")
