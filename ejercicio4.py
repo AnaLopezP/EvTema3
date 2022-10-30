@@ -50,9 +50,7 @@ def eliminar(pol, term):
         if pol[i] == term:
             pol.pop(i)
             return pol
-        else:
-            print("El elemento que buscas no está en el polinomio.")
-            return pol
+    return "No esta en el polinomio"
     
 
 '''pol1_conx = []
@@ -76,4 +74,4 @@ ahuevo2 = []
 ahuevo = print_term(ahuevo, 3, 0, ahuevo2)
 print(ahuevo2)
 
-print(eliminar(ahuevo2, '-2x^2'))
+print(eliminar(ahuevo2, '0'))
