@@ -10,11 +10,13 @@ def restar_polinomios(pol1, pol2):
     if len(pol1) < len(pol2):
         for i in range(len(pol2)-len(pol1)):
             pol1.insert(0, 0)
-            print(pol1)
         for i in range(len(pol1)):
             pol_nuevo.append(pol1[i] - pol2[i])
     elif len(pol1) > len(pol2):
-        pass
+        for i in range(len(pol1)-len(pol2)):
+            pol2.insert(0, 0)
+        for i in range(len(pol1)):
+            pol_nuevo.append(pol1[i] - pol2[i])
     else:
         for i in range(len(pol1)):
             pol_nuevo.append(pol1[i] - pol2[i])
@@ -57,3 +59,5 @@ print(pol3_conx)'''
 
 jsjs = restar_polinomios(pol1, pol4)
 print(jsjs)
+ahuevo = restar_polinomios(pol2, pol5)
+print(ahuevo)
