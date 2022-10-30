@@ -85,4 +85,10 @@ def jugar(posicion, a1, a2, a3):
     ficha = a1.desapilar()
     a2.apilar(ficha)
     jugar(posicion-1, a2, a3, a1)
+    print("aguja 2:")
+    a2.barrido()
+    print("aguja 3:")
+    a3.barrido()
+    print("aguja 1:")
+    a1.barrido()
 
