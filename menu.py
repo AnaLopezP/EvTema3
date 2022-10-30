@@ -25,12 +25,8 @@ def iniciar():
 
             for i in range(0, 75):
                 aguja1.apilar(i)
-                print(i)
 
-            aguja_prov = aguja1
-            while aguja3.tamanio != aguja_prov.tamanio:
-                ejercicio1.comparar(aguja1.cima.info, aguja2.cima.info)
-                ejercicio1.añadir_discoadisco(aguja1.cima.info, aguja2.cima.info, aguja3.cima.info, aguja1, aguja2, aguja3)
+            ejercicio1.jugar()
         
         elif decision == 2:
             mat = ejercicio2.crear_mat(ejercicio2.matriz)
@@ -89,6 +85,8 @@ def iniciar():
             print(list_ordenada_tamaño[0])
             print("La nave más pequeña es:")
             print(list_ordenada_tamaño[-1])
+
+
         if decision == 4:
             pol1 = ejercicio4.crear_polinomio()
             print(pol1)

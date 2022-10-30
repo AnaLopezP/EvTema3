@@ -63,7 +63,7 @@ def comparar(num1, num2):
         print("El disco es más grande que el que hay, no se puede poner encima, lo ponemos en otra aguja")
         return False
 
-def añadir_discoadisco(num1, num2, num3, aguja_inicial, aguja_quequiero, aguja_quesobra):
+'''def añadir_discoadisco(num1, num2, num3, aguja_inicial, aguja_quequiero, aguja_quesobra):
     if comparar(num1, num2) == True:
         #Me añades el disco a la aguja que teniamos prevista
             aguja_inicial.desapilar(num1)
@@ -73,19 +73,16 @@ def añadir_discoadisco(num1, num2, num3, aguja_inicial, aguja_quequiero, aguja_
         comparar(num1, num3)
         if comparar(num1, num3) == True:
             aguja_inicial.desapilar(num1)
-            aguja_quesobra.apilar(num1)
+            aguja_quesobra.apilar(num1)'''
 
 
-'''
-aguja1 = Pila()
-aguja2 = Pila()
-aguja3 = Pila()
+def jugar(posicion, a1, a2, a3):
+    if posicion == 1:
+        ficha = a1.desapilar()
+        a2.apilar(ficha)
+        return
+    jugar(posicion - 1, a1, a3, a2)
+    ficha = a1.desapilar()
+    a2.apilar(ficha)
+    jugar(posicion-1, a2, a3, a1)
 
-for i in range(0, 75):
-    aguja1.apilar(i)
-    print(i)
-
-aguja_prov = aguja1
-while aguja3.tamanio != aguja_prov.tamanio:
-    comparar(aguja1.cima.info, aguja2.cima.info)
-    añadir_discoadisco(aguja1.cima.info, aguja2.cima.info, aguja3.cima.info, aguja1, aguja2, aguja3)'''
