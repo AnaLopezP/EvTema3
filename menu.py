@@ -26,7 +26,7 @@ def iniciar():
             for i in range(0, 75):
                 aguja1.apilar(i)
 
-            ejercicio1.jugar(aguja1.tamanio(), aguja1, aguja2, aguja3)
+            ejercicio1.jugar(aguja1.cima.info, aguja1, aguja2, aguja3)
         
         if decision == 2:
             mat = ejercicio2.crear_mat(ejercicio2.matriz)
