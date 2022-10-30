@@ -191,8 +191,8 @@ def at():
         at()
     return si_at
 
-while lista.lista_vacia != True:
+while Lista.lista_vacia(lista) != True:
     at()
-    lista.lista_vacia()
+    Lista.lista_vacia(lista)
     
-
+print(lista.inicio.info)
