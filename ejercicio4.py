@@ -45,6 +45,14 @@ def polinomio(lista, len):
         print(resultado)
     return resultado
 
+def eliminar(pol, term):
+    for i in range(len(pol)):
+        if pol[i] == term:
+            pol.pop(i)
+        else:
+            print("El elemento que buscas no está en el polinomio.")     
+    return pol
+
 '''pol1_conx = []
 pol1_conx = print_term(pol1, 2, 0, pol1_conx)
 print(pol1_conx)
@@ -58,6 +66,12 @@ pol3_conx = print_term(pol3, 2, 0, pol3_conx)
 print(pol3_conx)'''
 
 jsjs = restar_polinomios(pol1, pol4)
-print(jsjs)
+jsjs2 = []
+jsjs = print_term(jsjs, 5, 0, jsjs2)
+print(jsjs2)
 ahuevo = restar_polinomios(pol2, pol5)
-print(ahuevo)
+ahuevo2 = []
+ahuevo = print_term(ahuevo, 3, 0, ahuevo2)
+print(ahuevo2)
+
+print(eliminar(jsjs2, '-2x^2'))
