@@ -167,4 +167,4 @@ def ordenar_pasajeros(lis):
 list_ordenada = ordenar_pasajeros(toda_info)
 print("LAS NAVES CON EL MAYOR NUMERO DE PASAJEROS")
 for i in range(0, 5):
-    print(list_ordenada[i][0] + " con " +list_ordenada[i][3] + " pasajeros")
+    print(str(list_ordenada[i][0]) + " con " + str(list_ordenada[i][3]) + " pasajeros")
