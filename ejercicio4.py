@@ -60,11 +60,11 @@ def eliminar(pol, term):
 
 pol1 = crear_polinomio()
 pol1_bien = []
-pol1_bien = print_term(pol1, len(pol1)- 1, 0, pol1_bien)
+pol1_bien = print_term(pol1, len(pol1), 0, pol1_bien)
 print(pol1_bien)
 pol2 = crear_polinomio()
 pol2_bien = []
-pol2_bien = print_term(pol2, len(pol2)- 1, 0, pol2_bien)
+pol2_bien = print_term(pol2, len(pol2), 0, pol2_bien)
 print(pol2)
 pol3 = restar_polinomios(pol1, pol2)
 elegir = input("Introduzca un polinomio de los anteriores para eliminar uno de sus elementos: ")
