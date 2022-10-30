@@ -194,4 +194,11 @@ def at():
 print("lista que empiza por AT:")
 print(at())
 
-print("Las naves que puedan llevar más de seis pasajeros son aquellas que tengan un tamaño ")
+print("Las naves que llevan seis o más pasajeros:")
+nvs_6omas = []
+for i in range(len(list_ordenada)):
+    if list_ordenada[i][3] >= 6:
+        nvs_6omas.append(list_ordenada[i])
+    else:
+        pass
+print(nvs_6omas)
