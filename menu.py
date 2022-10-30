@@ -19,7 +19,20 @@ def iniciar():
 
         decision = input("> ")
         if decision == 1:
-            pass
+            aguja1 = ejercicio1.Pila()
+            aguja2 = ejercicio1.Pila()
+            aguja3 = ejercicio1.Pila()
+
+            for i in range(0, 75):
+                aguja1.apilar(i)
+                print(i)
+
+            aguja_prov = aguja1
+            while aguja3.tamanio != aguja_prov.tamanio:
+                ejercicio1.comparar(aguja1.cima.info, aguja2.cima.info)
+                ejercicio1.añadir_discoadisco(aguja1.cima.info, aguja2.cima.info, aguja3.cima.info, aguja1, aguja2, aguja3)
+        
+        
         helpers.limpiar_pantalla()
 
         input("\nPresiona ENTER  para continuar")

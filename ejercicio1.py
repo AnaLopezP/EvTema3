@@ -49,13 +49,7 @@ class Pila(object):
             pila.apilar(dato)
             return dato
 
-aguja1 = Pila()
-aguja2 = Pila()
-aguja3 = Pila()
 
-for i in range(0, 75):
-    aguja1.apilar(i)
-    print(i)
 
 
 #El disco mas pequeño es el que corresponde al numero 74
@@ -84,8 +78,17 @@ def añadir_discoadisco(num1, num2, num3, aguja_inicial, aguja_quequiero, aguja_
             aguja_inicial.desapilar(num1)
             aguja_quesobra.apilar(num1)
 
-'''aguja_prov = aguja1
+
+
+aguja1 = Pila()
+aguja2 = Pila()
+aguja3 = Pila()
+
+for i in range(0, 75):
+    aguja1.apilar(i)
+    print(i)
+
+aguja_prov = aguja1
 while aguja3.tamanio != aguja_prov.tamanio:
     comparar(aguja1.cima.info, aguja2.cima.info)
-    añadir_discoadisco(aguja1.cima.info, aguja2.cima.info, aguja3.cima.info, aguja1, aguja2, aguja3)'''
-
+    añadir_discoadisco(aguja1.cima.info, aguja2.cima.info, aguja3.cima.info, aguja1, aguja2, aguja3)
