@@ -18,6 +18,9 @@ def print_term(pol, grad, i, lista):
         pass
 
 def polinomio(lista):
+        for i in lista:
+            lista[i] = int(lista[i])
+            print(lista[i])
         result = sum(lista)
         return result
 
