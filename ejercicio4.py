@@ -74,4 +74,4 @@ ahuevo2 = []
 ahuevo = print_term(ahuevo, 3, 0, ahuevo2)
 print(ahuevo2)
 
-print(eliminar(jsjs2, '-2x^2'))
+print(eliminar(ahuevo2, '-2x^2'))
