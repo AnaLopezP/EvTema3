@@ -193,3 +193,5 @@ def at():
 
 print("lista que empiza por AT:")
 print(at())
+
+print("Las naves que puedan llevar más de seis pasajeros son aquellas que tengan un tamaño ")
