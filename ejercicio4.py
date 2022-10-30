@@ -1,9 +1,9 @@
 def crear_polinomio():
     pol = []
-    termino = input("Introduzca termino: ")
+    termino = input("Introduzca numero para el termino: ")
     pol.append(termino)
     while termino != '':
-        termino = input("Introduzca termino: ")
+        termino = input("Introduzca numero para el termino: ")
         pol.append(termino)
     #pol.pop(-1)
     return pol
@@ -58,25 +58,17 @@ def eliminar(pol, term):
     return "No esta en el polinomio"
     
 
-'''pol1_conx = []
-pol1_conx = print_term(pol1, 2, 0, pol1_conx)
-print(pol1_conx)
-pol2_conx = []
-pol2_conx = print_term(pol2, 2, 0, pol2_conx)
-print(pol2_conx)
 
+pol1 = crear_polinomio()
+pol1_bien = []
+pol1_bien = print_term(pol1, len(pol1)- 1, 0, pol1_bien)
+print(pol1_bien)
+pol2 = crear_polinomio()
+pol2_bien = []
+pol2_bien = print_term(pol2, len(pol2)- 1, 0, pol2_bien)
+print(pol2)
 pol3 = restar_polinomios(pol1, pol2)
-pol3_conx = []
-pol3_conx = print_term(pol3, 2, 0, pol3_conx)
-print(pol3_conx)'''
-
-'''jsjs = restar_polinomios(pol1, pol4)
-jsjs2 = []
-jsjs = print_term(jsjs, 5, 0, jsjs2)
-print(jsjs2)
-ahuevo = restar_polinomios(pol2, pol5)
-ahuevo2 = []
-ahuevo = print_term(ahuevo, 3, 0, ahuevo2)
-print(ahuevo2)
-
-print(eliminar(ahuevo2, '0'))'''
+elegir = input("Introduzca un polinomio de los anteriores para eliminar uno de sus elementos: ")
+elim = input("Introduzca un elemento a eliminar: ")
+pol_nuevo = eliminar(elegir, elim)
+print(pol_nuevo)
