@@ -151,20 +151,24 @@ toda_info.pop(-1)
 print(toda_info)
 Lista.barrido(lista)
 
-def ordenar_pasajeros(lis):
+def ordenar_pasajeros(lis, filtro):
     i = 0
     control = True
     while i <= len(lis) - 2 and control:
         control = False
         for j in range(len(lis)-i-1):
-            if lis[j][3] < lis[j + 1][3]:
+            if lis[j][filtro] < lis[j + 1][filtro]:
                 lis[j], lis[j + 1] = lis[j +1], lis[j]
                 control = True
         i = i + 1
     return lis
 
 
-list_ordenada = ordenar_pasajeros(toda_info)
+list_ordenada = ordenar_pasajeros(toda_info, 3)
 print("LAS NAVES CON EL MAYOR NUMERO DE PASAJEROS")
 for i in range(0, 5):
     print(str(list_ordenada[i][0]) + " con " + str(list_ordenada[i][3]) + " pasajeros")
+
+list_ordenada_tamaño = ordenar_pasajeros(toda_info, 1)
+print("La nave que requiere mayor numero de tripulacion es:")
+print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_tamaño[0][1])) 
