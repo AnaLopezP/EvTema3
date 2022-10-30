@@ -130,6 +130,32 @@ class Vehiculo(Lista):
         return "El vehiculo con nombre " + str(self.nombre) + " tiene un largo de " + str(self.largo) + " una tripulacion de " + str(self.tripulacion) + " y un numero de pasajeros " + str(self.num_pasajeros)
 
 
+def ordenar_pasajeros(lis, filtro):
+    i = 0
+    control = True
+    while i <= len(lis) - 2 and control:
+        control = False
+        for j in range(len(lis)-i-1):
+            if lis[j][filtro] < lis[j + 1][filtro]:
+                lis[j], lis[j + 1] = lis[j +1], lis[j]
+                control = True
+        i = i + 1
+    return lis
+
+def at():
+    if Lista.lista_vacia(lista) != True:
+        if "AT" in lista.inicio.info:
+            si_at.append(lista.inicio.info)
+            lista.eliminar(lista.inicio.info)
+            at()
+        else:
+            lista.eliminar(lista.inicio.info)
+            at()
+    else:
+        pass
+    return si_at
+
+
 lista = Lista()
 toda_info = []
 dato = input("Ingresa el nombre de la nave: ")
@@ -150,19 +176,6 @@ while dato != '':
 toda_info.pop(-1)
 Lista.barrido(lista)
 
-def ordenar_pasajeros(lis, filtro):
-    i = 0
-    control = True
-    while i <= len(lis) - 2 and control:
-        control = False
-        for j in range(len(lis)-i-1):
-            if lis[j][filtro] < lis[j + 1][filtro]:
-                lis[j], lis[j + 1] = lis[j +1], lis[j]
-                control = True
-        i = i + 1
-    return lis
-
-
 list_ordenada = ordenar_pasajeros(toda_info, 3)
 print("LAS NAVES CON EL MAYOR NUMERO DE PASAJEROS")
 if len(info_lista) < 5:
@@ -177,20 +190,6 @@ print("La nave que requiere mayor numero de tripulacion es:")
 print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_tamaño[0][1])) 
 
 si_at = []
-def at():
-    if Lista.lista_vacia(lista) != True:
-        if "AT" in lista.inicio.info:
-            si_at.append(lista.inicio.info)
-            lista.eliminar(lista.inicio.info)
-            at()
-        else:
-            lista.eliminar(lista.inicio.info)
-            at()
-    else:
-        pass
-    return si_at
-
-
 print("lista que empiza por AT:")
 print(at())
 
