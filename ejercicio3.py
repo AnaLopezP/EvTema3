@@ -202,3 +202,8 @@ for i in range(len(list_ordenada)):
     else:
         pass
 print(nvs_6omas)
+
+print("La nave más grande es: ")
+print(list_ordenada_tamaño[0])
+print("La nave más pequeña es:")
+print(list_ordenada_tamaño[-1])
