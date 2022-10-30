@@ -11,15 +11,15 @@ class Lista(object):
     def __init__(self):
         #Crea una lista vacía
         self.inicio = None #apunta al nodo que está al principio de la lista
-        self.tamanio = 0 #Cantidad de elementos lista
+        self.tamanio = 0 #Cantidad de lista.inicios lista
         
     def insertar (lista, dato, campo = None):
         '''
-        Agrega el elemento a la lista de manera ordenada
+        Agrega el lista.inicio a la lista de manera ordenada
         '''
         nodo = nodoLista()
         nodo.info = dato #le pasamos dato q queremos añadir
-        if (lista.inicio is None) or (Lista.criterio(lista.inicio.info, campo) > Lista.criterio(dato, campo)): #Mira si el elemento que queremos añadir es el primero de la lista o es menor q el primero
+        if (lista.inicio is None) or (Lista.criterio(lista.inicio.info, campo) > Lista.criterio(dato, campo)): #Mira si el lista.inicio que queremos añadir es el primero de la lista o es menor q el primero
 
             nodo.sig = lista.inicio #Se le asigna al siguiente del creado el inicio de la lista
             lista.inicio = nodo #Al inicio de la lista se le asigna la direción del nodo creado
@@ -44,15 +44,15 @@ class Lista(object):
     
     def eliminar(lista, clave, campo = None):
         '''
-        Elimina in elemento de la lista y lo devulve si lo encuentra
+        Elimina in lista.inicio de la lista y lo devulve si lo encuentra
         '''
         dato = None
-        if Lista.criterio(lista.inicio.info, campo) == Lista.criterio(clave, campo): #Si el elemento que queremos eliminar es el primero de la lista
+        if Lista.criterio(lista.inicio.info, campo) == Lista.criterio(clave, campo): #Si el lista.inicio que queremos eliminar es el primero de la lista
             dato = lista.inicio.info #se saca el nodo que está al principio y lo almacenamos en dato
             lista.inicio = lista.inicio.sig #Reasignamos la primera posición al nodo siguiente
             lista.tamanio -= 1
         
-        else: #El elemento NO esá al principio de la lista
+        else: #El lista.inicio NO esá al principio de la lista
             anterior = lista.inicio #Asignamos los nodos para recorrer la lista y ver dónde está
             actual = lista.inicio.sig
             while actual is not None and Lista.criterio(actual.info, campo) != Lista.criterio(clave, campo):
@@ -66,13 +66,13 @@ class Lista(object):
     
     def tamanio(lista):
         '''
-        Devuelve el número de elementos de la lista
+        Devuelve el número de lista.inicios de la lista
         '''
         return lista.tamanio
     
     def buscar(lista, buscado, campo= None):
         '''
-        Devuelve la dirección del elemento buscado
+        Devuelve la dirección del lista.inicio buscado
         '''
         aux = lista.inicio #Puntero auxiliar, que se le asigna la primera posición de la lista
         while aux is not None and aux.info != buscado: #Buscamos dato
@@ -177,17 +177,18 @@ print("La nave que requiere mayor numero de tripulacion es:")
 print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_tamaño[0][1])) 
 
 si_at = []
-def at(elemento):
-    if "AT" in elemento.info:
-        si_at.append(elemento.info)
-        lista.eliminar(elemento)
-        elemento = elemento.sig
-        at(elemento)
-    else:
-        lista.eliminar(elemento)
-        elemento = elemento.sig
-        at(elemento)
+def at():
+    while lista.lista_vacia == False:
+        if "AT" in lista.inicio.info:
+            si_at.append(lista.inicio.info)
+            lista.eliminar(lista.inicio)
+            lista.inicio = lista.inicio.sig
+            at()
+        else:
+            lista.eliminar(lista.inicio)
+            lista.inicio = lista.inicio.sig
+            at()
     return si_at
 
-print(at(lista.inicio))
+print(at())
 
