@@ -28,6 +28,4 @@ print(det)
 
 #funcion de sarrus recursiva
 def sarrus_rec():
-    for i in range(len(matriz)):
-        return 
-    return determinante
+    pass
