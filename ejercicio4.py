@@ -18,11 +18,11 @@ def print_term(pol, grad, i, lista):
         pass
 
 def polinomio(lista):
-        for i in lista:
-            lista[i] = int(lista[i])
-            print(lista[i])
-        result = sum(lista)
-        return result
+    for i in range(len(lista)):
+        lista[i] = int(lista[i])
+        print(lista[i])
+    result = sum(lista)
+    return result
 
 pol1_conx = print_term(pol1, 2, 0, pol1_conx)
 print(pol1_conx)
