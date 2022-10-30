@@ -1,13 +1,18 @@
 
 pol1 = [3, -4, 5]
 pol2 = [1, 5, -3]
-pol1_conx = []
-pol2_conx = []
+pol4 = [1, 2, 3, 4, 5]
+pol5 = [7, 8]
+
 
 def restar_polinomios(pol1, pol2):
     pol_nuevo = []
     if len(pol1) < len(pol2):
-        pass
+        for i in range(len(pol2)-len(pol1)):
+            pol1.insert(0, 0)
+            print(pol1)
+        for i in range(len(pol1)):
+            pol_nuevo.append(pol1[i] - pol2[i])
     elif len(pol1) > len(pol2):
         pass
     else:
@@ -22,7 +27,7 @@ def print_term(pol, grad, i, lista):
         lista.append(term)
         i = i + 1
         grad = grad - 1
-        print_term(pol, grad, i, pol1_conx)
+        print_term(pol, grad, i, lista)
         return lista
     else:
         pass
@@ -38,14 +43,17 @@ def polinomio(lista, len):
         print(resultado)
     return resultado
 
+'''pol1_conx = []
 pol1_conx = print_term(pol1, 2, 0, pol1_conx)
 print(pol1_conx)
+pol2_conx = []
 pol2_conx = print_term(pol2, 2, 0, pol2_conx)
 print(pol2_conx)
 
 pol3 = restar_polinomios(pol1, pol2)
-print(pol3)
 pol3_conx = []
 pol3_conx = print_term(pol3, 2, 0, pol3_conx)
-print(pol3_conx)
+print(pol3_conx)'''
 
+jsjs = restar_polinomios(pol1, pol4)
+print(jsjs)
