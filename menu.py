@@ -120,7 +120,8 @@ def iniciar():
         
         if decision == 5:
             pass
-        helpers.limpiar_pantalla()
+
+        #helpers.limpiar_pantalla()
 
         input("\nPresiona ENTER  para continuar")
 
