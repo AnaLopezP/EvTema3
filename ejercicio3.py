@@ -47,7 +47,7 @@ class Lista(object):
         Elimina in lista.inicio de la lista y lo devulve si lo encuentra
         '''
         dato = None
-        if Lista.criterio(lista.inicio.info, campo) == Lista.criterio(clave, campo): #Si el lista.inicio que queremos eliminar es el primero de la lista
+        if lista.inicio.info == clave: #Si el lista.inicio que queremos eliminar es el primero de la lista
             dato = lista.inicio.info #se saca el nodo que está al principio y lo almacenamos en dato
             lista.inicio = lista.inicio.sig #Reasignamos la primera posición al nodo siguiente
             lista.tamanio -= 1
@@ -178,17 +178,17 @@ print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_
 
 si_at = []
 def at():
-    while lista.lista_vacia == False:
-        if "AT" in lista.inicio.info:
-            si_at.append(lista.inicio.info)
-            lista.eliminar(lista.inicio)
-            lista.inicio = lista.inicio.sig
-            at()
-        else:
-            lista.eliminar(lista.inicio)
-            lista.inicio = lista.inicio.sig
-            at()
+    if "AT" in lista.inicio.info:
+        si_at.append(lista.inicio.info)
+        lista.eliminar(lista.inicio)
+        #lista.inicio.sig = lista.inicio
+        at()
+    else:
+        lista.eliminar(lista.inicio)
+        #lista.inicio.sig = lista.inicio
+        at()
     return si_at
 
-print(at())
+while lista.lista_vacia != True:
+    at()
 
