@@ -110,14 +110,14 @@ class Vehiculo(Lista):
 
         if self.nombre == 'Estrella de la Muerte':
             print("HAS DADO CON LA ESTRELLA DE LA MUERTE")
-            self.largo = 160 + "km"
-            self.tripulacion = 1381669
+            self.largo = str(34.37) + "km"
+            self.tripulacion = str(1381669) + " (contando soldados de asalto, oficiales imperiales, auxiliares y pilotos militares)"
             self.num_pasajeros = "mayor a 100000 civiles"
         if self.nombre == 'Halcón Milenario':
             print("HAS DADO CON EL HALCÓN MILENARIO")
-            self.largo = 200
-            self.tripulacion = 7
-            self.num_pasajeros = 0
+            self.largo = 34.75
+            self.tripulacion = str(4) + "(Han Solo, Chewbacca, Droma, Leia Organa)"
+            self.num_pasajeros = str(3) + "(Luke Skywalker, Ben Kenobi, Droide de reparaciones)"
     
     def lista(self, lista):
         lista.append(self.nombre)
