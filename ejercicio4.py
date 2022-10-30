@@ -49,9 +49,11 @@ def eliminar(pol, term):
     for i in range(len(pol)):
         if pol[i] == term:
             pol.pop(i)
+            return pol
         else:
-            print("El elemento que buscas no está en el polinomio.")     
-    return pol
+            print("El elemento que buscas no está en el polinomio.")
+            return pol
+    
 
 '''pol1_conx = []
 pol1_conx = print_term(pol1, 2, 0, pol1_conx)
