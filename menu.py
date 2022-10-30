@@ -33,6 +33,7 @@ def iniciar():
             print(mat)
             det = ejercicio2.sarrus_it(mat)
             print(det)
+            det2 = ejercicio2.sarrus_rec(mat)
 
         if decision == 3:
             lista = ejercicio3.Lista()
