@@ -5,7 +5,7 @@ def crear_polinomio():
     while termino != '':
         termino = input("Introduzca numero para el termino: ")
         pol.append(termino)
-    #pol.pop(-1)
+    pol.pop(-1)
     return pol
     
 
@@ -16,15 +16,15 @@ def restar_polinomios(pol1, pol2):
         for i in range(len(pol2)-len(pol1)):
             pol1.insert(0, 0)
         for i in range(len(pol1)):
-            pol_nuevo.append(pol1[i] - pol2[i])
+            pol_nuevo.append(int(pol1[i]) - int(pol2[i]))
     elif len(pol1) > len(pol2):
         for i in range(len(pol1)-len(pol2)):
             pol2.insert(0, 0)
         for i in range(len(pol1)):
-            pol_nuevo.append(pol1[i] - pol2[i])
+            pol_nuevo.append(int(pol1[i]) - int(pol2[i]))
     else:
         for i in range(len(pol1)):
-            pol_nuevo.append(pol1[i] - pol2[i])
+            pol_nuevo.append(int(pol1[i]) - int(pol2[i]))
     return pol_nuevo
 
 def print_term(pol, grad, i, lista):
@@ -59,14 +59,17 @@ def eliminar(pol, term):
     
 
 pol1 = crear_polinomio()
-pol1_bien = []
-pol1_bien = print_term(pol1, len(pol1), 0, pol1_bien)
-print(pol1_bien)
+print(pol1)
+y1 = []
+y1 = print_term(pol1, len(pol1)-1, 0, y1)
+print("y1 es " + str(y1))
 pol2 = crear_polinomio()
-pol2_bien = []
-pol2_bien = print_term(pol2, len(pol2), 0, pol2_bien)
 print(pol2)
+y2 = []
+y2 = print_term(pol2, len(pol2)-1, 0, y2)
+print("y2 es " + str(y2))
 pol3 = restar_polinomios(pol1, pol2)
+print(pol3)
 elegir = input("Introduzca un polinomio de los anteriores para eliminar uno de sus elementos: ")
 elim = input("Introduzca un elemento a eliminar: ")
 pol_nuevo = eliminar(elegir, elim)
