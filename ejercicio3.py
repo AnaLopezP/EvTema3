@@ -148,7 +148,6 @@ while dato != '':
     print(a)
 
 toda_info.pop(-1)
-print(toda_info)
 Lista.barrido(lista)
 
 def ordenar_pasajeros(lis, filtro):
@@ -177,6 +176,18 @@ list_ordenada_tamaño = ordenar_pasajeros(toda_info, 1)
 print("La nave que requiere mayor numero de tripulacion es:")
 print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_tamaño[0][1])) 
 
-for i in range(len(info_lista)):
-    if "AT" in info_lista[i][0]:
-        print(info_lista[i])
+si_at = []
+def at(elemento):
+    if "AT" in elemento.info:
+        si_at.append(elemento.info)
+        lista.eliminar(elemento)
+        elemento = elemento.sig
+        at(elemento)
+    else:
+        lista.eliminar(elemento)
+        elemento = elemento.sig
+        at(elemento)
+    return si_at
+
+print(at(lista.inicio))
+
