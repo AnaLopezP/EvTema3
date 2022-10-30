@@ -58,7 +58,6 @@ def eliminar(pol, term):
     return "No esta en el polinomio"
     
 
-
 pol1 = crear_polinomio()
 pol1_bien = []
 pol1_bien = print_term(pol1, len(pol1)- 1, 0, pol1_bien)
