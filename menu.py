@@ -29,12 +29,10 @@ def iniciar():
             ejercicio1.jugar(aguja1.cima.info, aguja1, aguja2, aguja3)
         
         if decision == 2:
-            mat = ejercicio2.crear_mat(ejercicio2.matriz)
-            print(mat)
-            det = ejercicio2.sarrus_it(mat)
+            det = ejercicio2.sarrus_it(ejercicio2.matriz)
             print(det)
-            det2 = ejercicio2.sarrus_rec(mat)
-
+            det2 = ejercicio2.sarrus_rec(ejercicio2.matriz)
+            print(det2)
         if decision == 3:
             lista = ejercicio3.Lista()
             toda_info = []
