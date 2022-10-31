@@ -1,6 +1,5 @@
 import unittest
 import ejercicio2
-import ejercicio3
 
 class Test_MatrizesDet(unittest.TestCase):
     def det_iterativo(self):

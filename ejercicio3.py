@@ -103,9 +103,9 @@ class Lista(object):
 class Vehiculo(Lista):
     def __init__(self, nombre):
         self.nombre = nombre
-        self.largo = random.randint(10, 100) #en metros
-        self.tripulacion = random.randint(2, 10)
-        self.num_pasajeros = random.randint(20, 50)
+        self.largo = int(input("Introduzca el largo: ")) #en metros
+        self.tripulacion = int(input("Introduzca el num de tripulantes: "))
+        self.num_pasajeros = int(input("Introduzca el num de pasajeros: "))
         super().__init__()
 
         if self.nombre == 'Estrella de la Muerte':
