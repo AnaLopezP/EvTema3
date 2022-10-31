@@ -158,7 +158,8 @@ def at(l, l2):
     return l2
 
 
-'''lista = Lista()
+lista = Lista()
+'''
 toda_info = []
 dato = input("Ingresa el nombre de la nave: ")
 info_lista = []
