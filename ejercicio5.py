@@ -62,4 +62,4 @@ def quitar(tabla, dato):
 tabla1 = crear_tabla(93)
 tabla2 = crear_tabla(93)
 #agregar(tabla1, 'hola')
-funcion_hash('y')
+funcion_hash('Perra Sarnosa')
