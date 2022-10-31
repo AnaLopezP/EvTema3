@@ -1,4 +1,3 @@
-import random
 
 class nodoLista(object):
     '''
@@ -159,8 +158,11 @@ def at(l, l2):
 
 
 lista = Lista()
-'''
+si_at = []
 toda_info = []
+list_ordenada = ordenar_pasajeros(toda_info, 3)
+'''
+
 dato = input("Ingresa el nombre de la nave: ")
 info_lista = []
 a = Vehiculo(dato)
@@ -179,7 +181,7 @@ while dato != '':
 toda_info.pop(-1)
 Lista.barrido(lista)
 
-list_ordenada = ordenar_pasajeros(toda_info, 3)
+
 print("LAS NAVES CON EL MAYOR NUMERO DE PASAJEROS")
 if len(info_lista) < 5:
     for i in range(len(list_ordenada)):
@@ -192,7 +194,7 @@ list_ordenada_tamaño = ordenar_pasajeros(toda_info, 1)
 print("La nave que requiere mayor numero de tripulacion es:")
 print((list_ordenada_tamaño[0][0]) + " con un tamaño de " + str(list_ordenada_tamaño[0][1])) 
 
-si_at = []
+
 print("lista que empiza por AT:")
 print(at())
 
