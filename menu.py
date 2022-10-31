@@ -31,8 +31,8 @@ def iniciar():
         if decision == 2:
             det = ejercicio2.sarrus_it(ejercicio2.matriz)
             print(det)
-            det2 = ejercicio2.sarrus_rec(ejercicio2.matriz)
-            print(det2)
+            '''det2 = ejercicio2.sarrus_rec(ejercicio2.matriz)
+            print(det2)'''
         if decision == 3:
             lista = ejercicio3.Lista()
             toda_info = []

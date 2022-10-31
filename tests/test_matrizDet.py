@@ -3,5 +3,8 @@ import ejercicio2
 import ejercicio3
 
 class Test_MatrizesDet(unittest.TestCase):
-    def crear_matriz(self):
-        self.assertEqual(ejercicio2.crear_mat(ejercicio2.matriz), )
+    def det_iterativo(self):
+        self.assertEqual(ejercicio2.sarrus_it(ejercicio2.matriz), -6)
+
+if __name__ == '__main__':
+    unittest.main()
