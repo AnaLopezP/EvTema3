@@ -103,22 +103,24 @@ class Lista(object):
 class Vehiculo(Lista):
     def __init__(self, nombre):
         self.nombre = nombre
-        self.largo = int(input("Introduzca el largo: ")) #en metros
-        self.tripulacion = int(input("Introduzca el num de tripulantes: "))
-        self.num_pasajeros = int(input("Introduzca el num de pasajeros: "))
         super().__init__()
-
         if self.nombre == 'Estrella de la Muerte':
             print("HAS DADO CON LA ESTRELLA DE LA MUERTE")
             self.largo = 600
             self.tripulacion = 1381669
             self.num_pasajeros = 100000
-        if self.nombre == 'Halcón Milenario':
+        elif self.nombre == 'Halcón Milenario':
             print("HAS DADO CON EL HALCÓN MILENARIO")
             self.largo = 34.75
             self.tripulacion = 4
             self.num_pasajeros = 3
-    
+        else:
+            self.largo = int(input("Introduzca el largo: ")) #en metros
+            self.tripulacion = int(input("Introduzca el num de tripulantes: "))
+            self.num_pasajeros = int(input("Introduzca el num de pasajeros: "))
+        
+
+        
     def lista(self, lista):
         lista.append(self.nombre)
         lista.append(self.largo)
