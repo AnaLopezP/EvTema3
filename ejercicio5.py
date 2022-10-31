@@ -32,6 +32,12 @@ def funcion_hash(dato):
             nueva_lista.append(nueva_letra)
     stri = "".join(nueva_lista)
     return stri
+
+def funcion_hash2(dato):
+    lista = []
+    nueva_lista = []
+    for i in range(len(dato)):
+
         
 
 
@@ -64,4 +70,5 @@ def quitar(tabla, dato):
     return dato
 tabla1 = crear_tabla(93)
 tabla2 = crear_tabla(93)
-print(funcion_hash('Perra Sarnosa'))
+print(funcion_hash('hola'))
+
