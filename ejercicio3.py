@@ -161,6 +161,7 @@ lista = Lista()
 si_at = []
 toda_info = []
 list_ordenada = ordenar_pasajeros(toda_info, 3)
+list_ordenada_tamaño = ordenar_pasajeros(toda_info, 1)
 '''
 
 dato = input("Ingresa el nombre de la nave: ")
