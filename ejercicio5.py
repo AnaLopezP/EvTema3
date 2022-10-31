@@ -20,15 +20,18 @@ def funcion_hash(dato):
     Por ejemplo: si queremos buscar un nombre con apellidos, en vez de pasarle el nombre, que puede haber cientos, le pasas el código, que va a ser más exclusivo
     En este caso, el codigo es el resto de la longitud de la palabra (menos los espacios) entre el tamaño de la tabla.'''
     lista = []
+    nueva_lista = []
     for i in range(len(dato)):
         lista.append(dato[i])
     for i in range(len(lista)):
         if ord(lista[i]) < 62:
             nueva_letra = chr(ord(lista[i]) + 4) + chr(ord(lista[i]) + 5) + chr(ord(lista[i]) + 6) + chr(ord(lista[i])  + 7) + chr(ord(lista[i])  + 8) + chr(ord(lista[i]) +9) +chr(ord(lista[i]) +10)+ chr(ord(lista[i]) +11)
+            nueva_lista.append(nueva_letra)
         else:
             nueva_letra = chr(ord(lista[i]) - 4) + chr(ord(lista[i]) - 5) + chr(ord(lista[i]) - 6) + chr(ord(lista[i]) -7) + chr(ord(lista[i]) -8) + chr(ord(lista[i]) -9) +chr(ord(lista[i]) -10)+ chr(ord(lista[i]) -11)
-        print(nueva_letra)
-    return nueva_letra
+            nueva_lista.append(nueva_letra)
+    stri = "".join(nueva_lista)
+    return stri
         
 
 
@@ -61,5 +64,4 @@ def quitar(tabla, dato):
     return dato
 tabla1 = crear_tabla(93)
 tabla2 = crear_tabla(93)
-#agregar(tabla1, 'hola')
-funcion_hash('Perra Sarnosa')
+print(funcion_hash('Perra Sarnosa'))
